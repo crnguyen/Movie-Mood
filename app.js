@@ -3,6 +3,7 @@ require("dotenv").config()
 const express = require('express');
 const axios = require('axios');
 const app = express();
+const port = 3000;
 
 let API_KEY = process.env.API_KEY //using nv to hide API key
 
@@ -28,6 +29,9 @@ app.get('/', (req, res) => {
         console.log(err);
     })
 })
-app.listen(3000);
+
+app.listen(port, () => {
+    console.log(`You are on http://localhost:${port}`)
+  })
 
 // 
