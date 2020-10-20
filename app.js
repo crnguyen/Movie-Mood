@@ -13,17 +13,15 @@ app.set("view engine", "ejs")
 app.use(express.static("static"))
 // express using static to access CSS
 app.get('/', (req, res) => {
-    let qs = {
-        params: {
-            s: 'halloween',
-            apikey: API_KEY
-        }
-    }
-    axios.get('https://api.themoviedb.org/27/movie/horror', qs)
+    // 
+    // let movie = req.query.Scary
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27`)
     .then((response) => {
+        console.log("******RESPONSE:", response)
         console.log(response.data)
-        let movies = response.data.Search //setting a variable to our data
+        let movies = response.data //setting a variable to our data
         res.render("home", {movies}); //render home with the data
+        console.log(movies);
     })
     .catch(err => {
         console.log(err);
@@ -31,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`You are on http://localhost:${port}`)
+    console.log(`You are on ${port}`)
   })
 
 // 
