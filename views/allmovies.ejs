@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All the spooky movies</h1>
+
+    <% if (data) { %>
+        <% data.forEach(t => { %>
+            <div>
+                <h3> (<%= t.title %>) </h3>
+            </div>
+        <% }); %>
+        <% } else { %> 
+            <div>No movie found... Sorry.</div>
+        <% } %> 
+</body>
+</html>
