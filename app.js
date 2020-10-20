@@ -13,8 +13,9 @@ app.use(ejsLayouts);
 // axios call to get movies
 app.set("view engine", "ejs")
 //using ejs as the view engine for rendering ejs files
-app.use(express.static("static"))
+// app.use(express.static("static"))
 // express using static to access CSS
+app.use(express.static(__dirname + '/static'));
 
 app.get("/", (req, res) => {
     res.render("home");
