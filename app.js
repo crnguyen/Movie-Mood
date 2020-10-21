@@ -3,12 +3,12 @@ require("dotenv").config()
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const ejsLayouts = require('express-ejs-layouts');
+// const ejsLayouts = require('express-ejs-layouts');
 const port = 3000;
 
 let API_KEY = process.env.API_KEY //using nv to hide API key
 // Enables EJS Layouts middleware
-app.use(ejsLayouts);
+// app.use(ejsLayouts);
 
 // axios call to get movies
 app.set("view engine", "ejs")
@@ -28,9 +28,9 @@ app.get('/allmovies', (req, res) => {
     .then((response) => {
         // console.log("******RESPONSE:", response)
         // console.log(response.data)
-        let movies = response.data //setting a variable to our data
-        res.render("allmovies", {data: movies}); //render allmovies page with the data
-        // console.log(movies);
+        let movies = response.data.results //setting a variable to our data
+        res.render("allmovies", {movies}); //render allmovies page with the data
+        console.log(movies); //
     })
     .catch(err => {
         console.log(err);
