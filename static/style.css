@@ -1,0 +1,9 @@
+body {
+    align-content: center;
+    color: white;
+    background-color: black;
+}
+
+.inline {
+    display: inline-block;
+}
