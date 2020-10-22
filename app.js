@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 app.get('/allmovies', (req, res) => {
     // 
     // let movie = req.query.Scary
-    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27`)
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&total_items=50`)
     .then((response) => {
         // console.log("******RESPONSE:", response)
         // console.log(response.data)
