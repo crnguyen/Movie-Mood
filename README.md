@@ -3,5 +3,12 @@ App that picks a horror/thriller movie for you to watch using the TMDB API. 🎃
 
 * to start in server, run node app.js
 
+## Preview
+---
+![Homepage](https://i.imgur.com/Ne8QYox.jpg)
+
 ## Resources
+---
 * https://developers.themoviedb.org/
+* Image credit - https://www.maracayhomes.com/10-spooky-things-to-do-in-gilbert/
+* Logo credit - http://freepngimages.com/halloween-pumpkin-transparent-png/

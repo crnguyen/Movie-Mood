@@ -2,14 +2,32 @@ body {
     align-content: center;
     color: white;
     background-color: black;
+    /* margin: 0px auto; */
+    background-image: url("https://www.maracayhomes.com/wp-content/uploads/sites/5/2019/10/Stocksy_txp348a8d9cBLV200_Medium_2795595.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .inline {
     display: inline-block;
+    padding: 5px;
 }
 
 .brand-logo>img {
     height: 64px;
     padding: 0px;
     width: auto; 
-  }
+}
+
+.homepage {
+    text-align: center;
+}
+
+.creepyFont {
+    font-family: 'Creepster', cursive;
+}
+
+.mainFont {
+    font-family: 'Oswald', sans-serif;
+}

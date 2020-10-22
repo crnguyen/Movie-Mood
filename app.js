@@ -23,6 +23,11 @@ app.get("/", (req, res) => {
     console.log("homepage")
   });
 
+app.get("/about", (req, res) => {
+    res.render("about");
+    console.log("about")
+});
+
 app.get('/allmovies', (req, res) => {
     // 
     // let movie = req.query.Scary
