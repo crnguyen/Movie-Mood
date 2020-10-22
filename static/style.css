@@ -7,3 +7,9 @@ body {
 .inline {
     display: inline-block;
 }
+
+.brand-logo>img {
+    height: 64px;
+    padding: 0px;
+    width: auto; 
+  }

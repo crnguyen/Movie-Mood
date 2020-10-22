@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Halloween Movies</title>
-</head>
-<body>
-    <a href="/">HOME</a>
-    <h1>Results</h1>
+<h1>Results</h1>
     
-    <% movies.forEach(m => { %>
-        <div>
-            <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
-            <p><%= m.overview %></p>
-        </div>
-    <% }) %> 
+<% movies.forEach(m => { %>
+    <div>
+        <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
+        <p><%= m.overview %></p>
+    </div>
+<% }) %> 
 
-    <p>
-        <a href="/allmovies2">>>></a>
-    </p>
-</body>
-</html>
+<p>
+    <a href="/allmovies2">View More</a>
+</p>
+    
+
