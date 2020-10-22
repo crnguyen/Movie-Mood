@@ -12,3 +12,4 @@ App that picks a horror/thriller movie for you to watch using the TMDB API. 🎃
 * https://developers.themoviedb.org/
 * Image credit - https://www.maracayhomes.com/10-spooky-things-to-do-in-gilbert/
 * Logo credit - http://freepngimages.com/halloween-pumpkin-transparent-png/
+* Google Fonts - https://fonts.google.com/specimen/Creepster?sidebar.open=true&selection.family=Creepster|Oswald
