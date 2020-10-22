@@ -10,15 +10,15 @@
     <a href="/">HOME</a>
     <h1>Results</h1>
     
-    <% movies.forEach(m => { %>
+    <% moviestwo.forEach(m => { %>
         <div>
             <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
             <p><%= m.overview %></p>
         </div>
     <% }) %> 
 
-    <p>
+    <!-- <p>
         <a href="/allmovies2">>>></a>
-    </p>
+    </p> -->
 </body>
 </html>

@@ -19,18 +19,31 @@ app.use(express.static(__dirname + '/static'));
 
 app.get("/", (req, res) => {
     res.render("home");
+    console.log("homepage")
   });
 
 app.get('/allmovies', (req, res) => {
     // 
     // let movie = req.query.Scary
-    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&total_items=50`)
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=1`)
     .then((response) => {
         // console.log("******RESPONSE:", response)
         // console.log(response.data)
         let movies = response.data.results //setting a variable to our data
         res.render("allmovies", {movies}); //render allmovies page with the data
         console.log(movies); //
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/allmovies2', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=2`)
+    .then((response) => {
+        let moviestwo = response.data.results
+        res.render("allmovies2", {moviestwo});
+        console.log("2nd PAGE:", moviestwo)
     })
     .catch(err => {
         console.log(err);
