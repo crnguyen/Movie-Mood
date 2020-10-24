@@ -1,7 +1,7 @@
 <div class="mainFont">
     <h1>Results</h1>
         
-    <% moviestwo.forEach(m => { %>
+    <% moviesthree.forEach(m => { %>
         <div>
             <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
             <p><%= m.overview %></p>
@@ -9,7 +9,6 @@
     <% }) %> 
     
     <p>
-        <a href="/allmovies">Back</a>
-        <a href="/allmovies3">View More</a>
+        <a href="/allmovies2">Back</a>
     </p>
 </div>

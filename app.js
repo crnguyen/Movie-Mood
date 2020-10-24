@@ -56,6 +56,18 @@ app.get('/allmovies2', (req, res) => {
     })
 })
 
+app.get('/allmovies3', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=3`)
+    .then((response) => {
+        let moviesthree = response.data.results
+        res.render('allmovies3', {moviesthree});
+        console.log("3rd page", moviesthree)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
 app.listen(port, () => {
     console.log(`You are on ${port}`)
   })
