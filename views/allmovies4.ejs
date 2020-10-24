@@ -1,0 +1,16 @@
+<div class="mainFont">
+    <h1>Results</h1>
+        
+    <% moviesfour.forEach(m => { %>
+        <div>
+            <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
+            <p><%= m.overview %></p>
+        </div>
+    <% }) %> 
+    
+    <p>
+        <a href="/allmovies3">Back</a>
+        <br>
+        <a href="/allmovies5">View More</a>
+    </p>
+</div>
