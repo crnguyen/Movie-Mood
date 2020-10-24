@@ -19,3 +19,4 @@ App that picks a horror/thriller movie for you to watch using the TMDB API. 🎃
 * Refactor to include all genres
 * Create a page where users can select which type of genre they want to watch
 * Add search by movie feature
+* Add login/signup feature
