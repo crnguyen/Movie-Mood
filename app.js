@@ -36,7 +36,7 @@ app.get('/allmovies', (req, res) => {
         // console.log("******RESPONSE:", response)
         // console.log(response.data)
         let movies = response.data.results //setting a variable to our data
-        res.render("allmovies", {movies}); //render allmovies page with the data
+        res.render("movie_results/allmovies", {movies}); //render allmovies page with the data
         console.log(movies); //
     })
     .catch(err => {
@@ -48,7 +48,7 @@ app.get('/allmovies2', (req, res) => {
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=2`)
     .then((response) => {
         let moviestwo = response.data.results
-        res.render("allmovies2", {moviestwo});
+        res.render("movie_results/allmovies2", {moviestwo});
         console.log("2nd PAGE:", moviestwo)
     })
     .catch(err => {
@@ -60,7 +60,7 @@ app.get('/allmovies3', (req, res) => {
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=3`)
     .then((response) => {
         let moviesthree = response.data.results
-        res.render('allmovies3', {moviesthree});
+        res.render('movie_results/allmovies3', {moviesthree});
         console.log("3rd page", moviesthree)
     })
     .catch(err => {
@@ -72,7 +72,7 @@ app.get('/allmovies4', (req, res) => {
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=4`)
     .then((response) => {
         let moviesfour = response.data.results
-        res.render('allmovies4', {moviesfour});
+        res.render('movie_results/allmovies4', {moviesfour});
         console.log("4th page", moviesfour)
     })
     .catch(err => {
@@ -84,8 +84,20 @@ app.get('/allmovies5', (req, res) => {
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=5`)
     .then((response) => {
         let moviesfive = response.data.results
-        res.render('allmovies5', {moviesfive});
+        res.render('movie_results/allmovies5', {moviesfive});
         console.log("5th page", moviesfive)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/allmovies6', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=6`)
+    .then((response) => {
+        let moviessix = response.data.results
+        res.render('movie_results/allmovies6', {moviessix});
+        console.log("6th page", moviessix)
     })
     .catch(err => {
         console.log(err);
