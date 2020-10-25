@@ -31,3 +31,8 @@ body {
 .mainFont {
     font-family: 'Oswald', sans-serif;
 }
+
+.resultsBody {
+    width: 80%;
+    margin: 0 auto;
+}
