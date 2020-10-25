@@ -104,6 +104,54 @@ app.get('/allmovies6', (req, res) => {
     })
 })
 
+app.get('/allmovies7', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=7`)
+    .then((response) => {
+        let moviesseven = response.data.results
+        res.render('movie_results/allmovies7', {moviesseven});
+        console.log("7th page", moviesseven)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/allmovies8', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=8`)
+    .then((response) => {
+        let movieseight = response.data.results
+        res.render('movie_results/allmovies8', {movieseight});
+        console.log("8th page", movieseight)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/allmovies9', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=9`)
+    .then((response) => {
+        let moviesnine = response.data.results
+        res.render('movie_results/allmovies9', {moviesnine});
+        console.log("9th page", moviesnine)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/allmovies10', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=10`)
+    .then((response) => {
+        let moviesten = response.data.results
+        res.render('movie_results/allmovies10', {moviesten});
+        console.log("10th page", moviesten)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
 app.listen(port, () => {
     console.log(`You are on ${port}`)
   })
