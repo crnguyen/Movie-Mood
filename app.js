@@ -73,7 +73,19 @@ app.get('/allmovies4', (req, res) => {
     .then((response) => {
         let moviesfour = response.data.results
         res.render('allmovies4', {moviesfour});
-        console.log("3rd page", moviesfour)
+        console.log("4th page", moviesfour)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/allmovies5', (req, res) => {
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27|53&page=5`)
+    .then((response) => {
+        let moviesfive = response.data.results
+        res.render('allmovies5', {moviesfive});
+        console.log("5th page", moviesfive)
     })
     .catch(err => {
         console.log(err);
