@@ -3,8 +3,24 @@
         
     <% moviesfour.forEach(m => { %>
         <div>
+            
             <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
-            <p><%= m.overview %></p>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-red deep-orange darken-4 btn modal-trigger" href="#modal1">View Summary</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Overview</h4>
+                    <hr>
+                    <p><%= m.overview %></p>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
+                </div>
+            </div>
+
         </div>
     <% }) %> 
     
