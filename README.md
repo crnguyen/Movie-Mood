@@ -5,7 +5,11 @@ App that picks a horror/thriller movie for you to watch using the TMDB API. 🎃
 
 ## Preview
 ---
+Homepage
 ![Homepage](https://i.imgur.com/Ne8QYox.jpg)
+
+Movie Results page with popup modal
+![Results](https://i.imgur.com/yZ5Z9Hh.jpg)
 
 ## Resources
 ---
