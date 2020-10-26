@@ -4,7 +4,7 @@
     <% moviesfive.forEach(m => { %>
         <div>
 
-            <h3><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
+            <h3 class="movieTitle"><%= m.title %> (<%= m.release_date.substring(0,4)%>) </h3>
             <!-- Modal Trigger -->
             <a class="waves-effect waves-red deep-orange darken-4 btn modal-trigger" href="#modal1">View Summary</a>
 
@@ -20,7 +20,7 @@
                     <a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
                 </div>
             </div>
-            
+
         </div>
     <% }) %> 
     

@@ -40,3 +40,7 @@ body {
 .modal {
     color: black;
 }
+
+.movieTitle:hover {
+    color:red;
+}
