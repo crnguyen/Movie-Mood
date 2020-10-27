@@ -11,6 +11,11 @@ Homepage
 Movie Results page with popup modal
 ![Results](https://i.imgur.com/yZ5Z9Hh.jpg)
 
+## Tech Stack
+* Node.js
+* EJS
+* HTML/CSS
+
 ## Resources
 ---
 * https://developers.themoviedb.org/
